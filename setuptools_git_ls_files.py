@@ -6,12 +6,10 @@ import sys
 def find_files(dirname):
     dirname = dirname or "."
     if os.path.isdir(os.path.join(dirname, ".git")):
-        for path in subprocess.run(
+        for path in subprocess.check_output(
             ["git", "ls-files", "--cached", "--recurse-submodules"],
-            check=True,
-            capture_output=True,
             cwd=dirname,
-        ).stdout.decode(sys.getfilesystemencoding()).splitlines():
+        ).decode(sys.getfilesystemencoding()).splitlines():
             yield os.path.normcase(path)
 
 
