@@ -31,6 +31,7 @@ setup_params = dict(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
@@ -40,7 +41,6 @@ setup_params = dict(
         "Topic :: System :: Software Distribution",
         "Topic :: Utilities",
     ],
-    python_requires=">=3.5",
 )
 
 # Clean up first, old eggs seem to confuse setuptools_scm
